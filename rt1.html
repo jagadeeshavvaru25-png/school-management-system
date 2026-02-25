@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Managment</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(44, 62, 80, 0.9);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      height: 70px;
+    }
+
+   
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+      padding: 6px 10px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      color: #1abc9c;
+      background-color: blanchedalmond;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                  url("https://raghavfoundation.org.in/wp-content/uploads/2023/05/school-image.jpg") 
+                  no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .hero a {
+      background: #2caab3;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .hero a:hover {
+      background: #0ce681;
+    }
+
+    /* General Section */
+    .section {
+      padding: 80px 40px;
+      text-align: left;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    
+    /* Contact Form */
+    #contact input, 
+    #contact textarea, 
+    #contact button {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    #contact button {
+      background: #2caab3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #contact button:hover {
+      background: #0ce681;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer .social-icons img {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      
+    <ul>
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#about">ℹ About</a></li>
+      <li><a href="#Events">🗓Events</a></li>
+      <li><a href="#Exams">📝Exams</a></li>
+      <li><a href="#Marks">📊 Marks</a></li>
+      <li><a href="#Attendence">🧍‍♂Attendence</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+      <li><a href="#" onclick="logout()">🚪 Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to the School Managment</h1>
+    <p>“Our student website provides an easy way to access study materials, attend online exams, and track your progress—all in one place.”.</p>
+    
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About the School Managment</h2>
+    <p>Our student website is designed to make learning simple, interactive, and organized.
+We aim to:
+<br>
+1.Provide easy access to academic information
+<br>
+2.Help students prepare for exams with online tests
+<br>
+3.Track performance and improve results
+<br>
+4.Encourage collaboration through discussion and feedback
+<br>
+Mission: To create a smart digital platform where every student can learn, test, and grow.
+Vision: Empower students with technology-driven education tools.</p>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="section">
+    <h2>Upcoming Events</h2>
+    <p>1.Academic Events
+      <br>
+
+Science Exhibition 🧪
+<br>
+Mathematics Quiz 🧮
+<br>
+Spelling Bee 🗣
+<br>
+Debate Competition 🎤
+<br>
+Project Presentation 💻
+<br>
+<br>
+2.Cultural Events
+<br>
+Annual Day Celebration 🎭
+<br>
+Dance & Music Fest 🎶
+<br>
+Art and Craft Exhibition 🎨
+<br>
+Traditional Day 👘
+<br>
+<br>
+Cultural Parade 🎋
+<br>
+3.Sports Events
+<br>
+Annual Sports Meet 🏅
+<br>
+Inter-House Football / Cricket ⚽🏏
+<br>
+Marathon / Yoga Day 🧘
+<br>
+Indoor Games Tournament ♟
+<br>
+<br>
+4.Special Days & Observances
+<br>
+Independence Day 🇮🇳
+<br>
+Republic Day Parade 🎆
+<br>
+Teachers’ Day 👩‍🏫
+<br>
+Children’s Day 🎈
+<br>
+Environment Day 🌱
+<br>
+Literacy Day 📖
+<br>
+<br>
+5.Workshops & Seminars
+<br>
+AI & Robotics Workshop 🤖
+<br>
+Career Guidance Session 💼
+<br>
+Personality Development Workshop 🌟
+<br>
+Coding Bootcamp 💻</p>
+  </section>
+
+  <!-- Exams -->
+  <section id="📝Exams" class="section">
+    <h2>📚 Types of Exams</h2>
+    <p>Unit Tests – Short tests conducted after every lesson or unit.
+      <br>
+
+Mid-Term Exams – Conducted halfway through the term to evaluate performance.
+<br>
+
+Final Exams – Major exams at the end of the semester or academic year.
+<br>
+
+Online Practice Tests – Self-assessment quizzes to prepare for main exams.
+<br>
+
+Mock Tests – Simulated exams to help students understand exam patterns.</p>
+  </section>
+  <!-- Marks -->
+  <section id="contact" class="section">
+    <h2>📊Marks</h2>
+    <P>
+      Features
+      <br>
+
+📘 Subject-wise Marks: Check your scores for each subject.
+<br>
+🧮 Total & Percentage: Automatically calculates total marks and overall percentage.
+<br>
+📈 Progress Report: See how your marks improve over time.
+<br>
+🏆 Rank List: Compare your performance with classmates.
+<br>
+📥 Download Report Card: Get your mark sheet as a PDF.
+    </P>
+ <!-- Attendence-->
+   <section id="Attendence" class="section">
+    <h2>Student Attendence</h2>
+   <p>
+    📘 Features
+
+✅ Daily Attendance Update: View your present/absent status each day.
+<br>
+
+📅 Monthly Report: Check your total working days and attendance percentage.
+<br>
+🏫 Subject-Wise Attendance: Track attendance for each subject or period.
+<br>
+📈 Attendance Chart: Visual graph showing your attendance trend.
+<br>
+📩 Leave Request Option: Apply for leave online with approval tracking.
+   </p>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="Class" placeholder="Your Class">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 School Managment
+    <div class="social-icons">
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="30" alt="Instagram"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" width="30" alt="Facebook"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" width="30" alt="LinkedIn"></a>
+      <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="30" alt="GitHub"></a>
+    </div>
+  </footer>
+
+ 
+    function logout() {
+      window.location.href = "rt3.html";
+    }
+  </script>
+</body>
+</html>
